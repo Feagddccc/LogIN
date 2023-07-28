@@ -82,13 +82,36 @@
                     <view key="view" contentMode="scaleToFill" id="Uck-Ik-dbI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="230" translatesAutoresizingMaskIntoConstraints="NO" id="UeG-n9-pm1">
+                                <rect key="frame" x="100" y="87.5" width="120" height="293.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WELCOME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3O-uv-Fxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="120" height="29"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dcd-Ok-jaY">
+                                        <rect key="frame" x="0.0" y="259" width="120" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Y4y-uM-YZ7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UeG-n9-pm1" firstAttribute="centerY" secondItem="Y4y-uM-YZ7" secondAttribute="centerY" constant="-50" id="bVv-gJ-X4f"/>
+                            <constraint firstItem="Y4y-uM-YZ7" firstAttribute="trailing" secondItem="UeG-n9-pm1" secondAttribute="trailing" constant="100" id="dNg-hG-IIC"/>
+                            <constraint firstItem="UeG-n9-pm1" firstAttribute="leading" secondItem="Y4y-uM-YZ7" secondAttribute="leading" constant="100" id="gub-cP-ZpM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV2-Zv-cej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="559" y="-42"/>
+            <point key="canvasLocation" x="558.75" y="-42.25352112676056"/>
         </scene>
     </scenes>
     <resources>
