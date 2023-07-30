@@ -38,6 +38,9 @@
                                                 <rect key="frame" x="0.0" y="126" width="280" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
+                                                <connections>
+                                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="DG8-pR-MRy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -48,11 +51,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
+                                                <connections>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUG-G9-DM7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-lX-rr5">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
+                                                <connections>
+                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAD-GD-Sml"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -68,7 +77,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <segue destination="GMA-x9-3np" kind="presentation" identifier="openWelcomeViewController" modalPresentationStyle="fullScreen" id="lAb-VI-PgL"/>
+                        <outlet property="passwordTextField" destination="tTR-W0-y1u" id="5uA-Dv-D2s"/>
+                        <outlet property="userNameTextField" destination="ZLt-uY-i8G" id="XNh-YB-HXE"/>
+                        <segue destination="GMA-x9-3np" kind="presentation" identifier="openWelcomeVC" modalPresentationStyle="fullScreen" id="lAb-VI-PgL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -96,6 +107,9 @@
                                         <rect key="frame" x="0.0" y="259" width="120" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Log Out"/>
+                                        <connections>
+                                            <segue destination="1x1-dU-USB" kind="unwind" unwindAction="unwindSegueWithSegue:" id="lSF-4W-zjt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -108,8 +122,12 @@
                             <constraint firstItem="UeG-n9-pm1" firstAttribute="leading" secondItem="Y4y-uM-YZ7" secondAttribute="leading" constant="100" id="gub-cP-ZpM"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="m3O-uv-Fxi" id="CYc-8x-vwm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YV2-Zv-cej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="1x1-dU-USB" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="558.75" y="-42.25352112676056"/>
         </scene>
