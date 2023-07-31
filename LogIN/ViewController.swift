@@ -20,6 +20,13 @@ final class LoginViewController: UIViewController {
         welcomeVC.user = user
     }
     
+    override func touchesBegan(
+        _ touches: Set<UITouch>,
+        with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        view.endEditing(false)
+    }
+    
     @IBAction func logInPressed() {
         guard userNameTextField.text == user, passwordTextField.text == password else {
             showAlert(
