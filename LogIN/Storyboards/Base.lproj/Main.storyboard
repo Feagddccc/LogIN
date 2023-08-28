@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="txb-eC-cj1">
-                                <rect key="frame" x="20" y="174" width="280" height="241"/>
+                                <rect key="frame" x="20" y="124" width="280" height="241"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Aj7-BW-mwb">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="160.5"/>
@@ -38,9 +38,6 @@
                                                 <rect key="frame" x="0.0" y="126" width="280" height="34.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
-                                                <connections>
-                                                    <action selector="logInPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="DG8-pR-MRy"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -51,17 +48,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot User Name?"/>
-                                                <connections>
-                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XUG-G9-DM7"/>
-                                                </connections>
                                             </button>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fg7-lX-rr5">
                                                 <rect key="frame" x="140" y="0.0" width="140" height="54.5"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Forgot Password?"/>
-                                                <connections>
-                                                    <action selector="forgotRegisterData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OAD-GD-Sml"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -73,23 +64,21 @@
                         <constraints>
                             <constraint firstItem="txb-eC-cj1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="10O-2v-uVz"/>
                             <constraint firstAttribute="trailing" secondItem="txb-eC-cj1" secondAttribute="trailing" constant="20" id="3OU-KW-6gs"/>
-                            <constraint firstItem="Aj7-BW-mwb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-40" id="XRa-gj-iiQ"/>
+                            <constraint firstItem="Aj7-BW-mwb" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-90" id="XRa-gj-iiQ"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTextField" destination="tTR-W0-y1u" id="5uA-Dv-D2s"/>
-                        <outlet property="userNameTextField" destination="ZLt-uY-i8G" id="XNh-YB-HXE"/>
-                        <segue destination="5bb-xF-3tD" kind="presentation" identifier="WelcomeViewController" modalPresentationStyle="fullScreen" id="O4i-LJ-Gq4"/>
+                        <segue destination="5bb-xF-3tD" kind="presentation" identifier="TabBarController" modalPresentationStyle="fullScreen" id="TV9-p4-PON"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-396" y="-83"/>
         </scene>
-        <!--View Controller-->
+        <!--User Info View Controller-->
         <scene sceneID="RaN-qi-6BB">
             <objects>
-                <viewController id="00P-Fh-F65" sceneMemberID="viewController">
+                <viewController id="00P-Fh-F65" customClass="UserInfoViewController" customModule="LogIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TQQ-zy-KW9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -97,7 +86,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="iRm-ac-o1q">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="qoc-Nv-gnV">
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="qoc-Nv-gnV">
                             <connections>
                                 <segue destination="4DS-zv-tGq" kind="show" id="j1f-ms-WxQ"/>
                             </connections>
@@ -108,10 +97,10 @@
             </objects>
             <point key="canvasLocation" x="1440" y="711.97183098591552"/>
         </scene>
-        <!--View Controller-->
+        <!--User Bio View Controller-->
         <scene sceneID="XVn-cP-hQg">
             <objects>
-                <viewController id="4DS-zv-tGq" sceneMemberID="viewController">
+                <viewController id="4DS-zv-tGq" customClass="UserBioViewController" customModule="LogIN" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVw-Jg-53t">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -170,7 +159,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="gk2-Ra-SQt">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5bb-xF-3tD" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="5bb-xF-3tD" customClass="TabBarController" customModule="LogIN" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="gc2-Hs-xlR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9GF-KU-3Rl">

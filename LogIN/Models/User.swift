@@ -12,8 +12,8 @@ struct User {
     
     static func getUser() -> User {
         User(
-            login: "User",
-             password: "Password",
+            login: "Admin",
+             password: "1234",
              person: Person.getPerson()
         )
     }
@@ -22,9 +22,8 @@ struct User {
 struct Person {
     let name: String
     let surname: String
-    let photo: String
+    let fullname: String
     let bio: String
-    let job: Company
     
     var fullName: String {
         "\(name) \(surname)"
@@ -32,38 +31,57 @@ struct Person {
     
     static func getPerson() -> Person {
         Person(
-            name: "Tim",
-            surname: "Cook",
-            photo: "TimCook",
+            name: "Bibi",
+            surname: "Dallas",
+            fullname: "BibiDallas",
             bio: """
-            Тим Кук родился в 1960 году в городе Мобил, штат Алабама, но детство провел в городке Робертсдейл. Мать будущего предпринимателя была фармацевтом, а отец — рабочим верфи. Кук мало рассказывал о своем детстве. Известна история о том, как он увидел расправу Ку-клукс-клана над негритянской семьей. Испугавшись, Тим крикнул, чтобы они остановились, но, приглядевшись, узнал в одном из участников действа местного священника и сбежал. Эта история, по словам предпринимателя, серьезно повлияла на его взгляды.
-            """,
-            job: Company.getCompany()
+            Don't let Daddy kiss me
+            Goodnight
+            
+            Little boy sleeping in dreams of peace
+            Mommy's been gone a long time
+            Daddy comes home and he still sleeps
+            Waiting for the world's worst crime
+            
+            And he comes up the stairs like he always does
+            And he never turns on the light
+            And he's wide awake, scared to death
+            
+            He smells his lust and he smells his sweat
+            Curled in ball he holds his breath
+            Praying to a God that he's never met
+            
+            Little boy lies by his Daddy's side
+            And he listen to him breathe
+            He knows there's something awful wrong
+            That he's far too young to see
+            And he knows he can't tell anyone
+            
+            He's so full of guilt and shame
+            And if he tells he'll be all alone
+            They'd steal his Daddy and they'd steal his home
+            And it's not so bad when Daddy leaves his alone
+            Praying to his God with his heart of stone
+            
+            Why the worst crime, in the world
+            And Daddy lies by his son's side
+            And he sleep both deep in well
+            No nightmares come to him tonight
+            Though his son lives in hell
+            
+            For his seed is sown where it should not be
+            And the beast in his mind don't care
+            And the only sounds are the tears that fall
+            Little boy turn his face to the wall
+            He knows that no one hears his call
+            But it seems like God hears nothing at all
+            
+            Don't let Daddy kiss me
+            Goodnight
+            """
         )
     }
 }
 
-struct Company {
-    let title: String
-    let jobTitle: JobTitle
-    let department: Department
-    
-    static func getCompany() -> Company {
-        Company(
-            title: "Apple",
-            jobTitle: .ceo,
-            department: .management
-        )
-    }
-}
 
-enum JobTitle: String {
-    case ceo = "CEO"
-    case cto = "CTO"
-}
-
-enum Department: String {
-    case management = "Management"
-    case marketing = "Marketing"
-}
 

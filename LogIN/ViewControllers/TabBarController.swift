@@ -10,8 +10,9 @@ import UIKit
 final class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
-        let appearance = UITabBarAppearance()
-        tabBar.standardAppearance = appearance
-        tabBar.scrollEdgeAppearance = appearance
+        let tabBarAppearance = UITabBarAppearance()
+        tabBarAppearance.configureWithOpaqueBackground()
+        tabBar.standardAppearance = tabBarAppearance
+        tabBar.scrollEdgeAppearance = tabBarAppearance
     }
 }
