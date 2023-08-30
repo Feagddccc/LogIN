@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserBioViewController: UIViewController {
+final class UserBioViewController: UIViewController {
     
     @IBOutlet var userBioTextView: UITextView!
     
@@ -17,7 +17,7 @@ class UserBioViewController: UIViewController {
         super.viewDidLoad()
         title = "\(user.person.fullName) Bio"
         userBioTextView.backgroundColor = .clear
-        userBioTextView.textColor = .white
+        userBioTextView.textColor = .black
         userBioTextView.text = user.person.bio
         
     }

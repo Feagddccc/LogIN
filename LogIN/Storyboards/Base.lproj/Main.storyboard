@@ -95,7 +95,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="08c-XG-gzY">
-                                <rect key="frame" x="20" y="192.5" width="280" height="121.5"/>
+                                <rect key="frame" x="20" y="192.5" width="280" height="71"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fFf-Yr-SaO">
                                         <rect key="frame" x="0.0" y="0.0" width="280" height="20.5"/>
@@ -131,23 +131,6 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="1eB-iO-1lf">
-                                        <rect key="frame" x="0.0" y="101" width="280" height="20.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Полное имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nxe-dc-vBO">
-                                                <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adj-SR-7EF">
-                                                <rect key="frame" x="140" y="0.0" width="140" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -160,10 +143,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="iRm-ac-o1q">
-                        <barButtonItem key="rightBarButtonItem" title="Bio" id="qoc-Nv-gnV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="qoc-Nv-gnV">
+                            <connections>
+                                <segue destination="4DS-zv-tGq" kind="show" id="hak-3o-Qdz"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="fullname" destination="adj-SR-7EF" id="DvD-9l-Vsn"/>
                         <outlet property="nameLabel" destination="YDI-py-xle" id="wmJ-47-uyS"/>
                         <outlet property="surnameLabel" destination="fyw-cQ-D6c" id="PSJ-NM-e6v"/>
                     </connections>
@@ -180,69 +166,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gAc-Qp-ntZ">
-                                <rect key="frame" x="16" y="20" width="288" height="532"/>
-                                <string key="text">Don't let Daddy kiss me
-            Goodnight
-            
-            Little boy sleeping in dreams of peace
-            Mommy's been gone a long time
-            Daddy comes home and he still sleeps
-            Waiting for the world's worst crime
-            
-            And he comes up the stairs like he always does
-            And he never turns on the light
-            And he's wide awake, scared to death
-            
-            He smells his lust and he smells his sweat
-            Curled in ball he holds his breath
-            Praying to a God that he's never met
-            
-            Little boy lies by his Daddy's side
-            And he listen to him breathe
-            He knows there's something awful wrong
-            That he's far too young to see
-            And he knows he can't tell anyone
-            
-            He's so full of guilt and shame
-            And if he tells he'll be all alone
-            They'd steal his Daddy and they'd steal his home
-            And it's not so bad when Daddy leaves his alone
-            Praying to his God with his heart of stone
-            
-            Why the worst crime, in the world
-            And Daddy lies by his son's side
-            And he sleep both deep in well
-            No nightmares come to him tonight
-            Though his son lives in hell
-            
-            For his seed is sown where it should not be
-            And the beast in his mind don't care
-            And the only sounds are the tears that fall
-            Little boy turn his face to the wall
-            He knows that no one hears his call
-            But it seems like God hears nothing at all
-            
-            Don't let Daddy kiss me
-            Goodnight</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
-                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="1VZ-7W-DCN">
+                                <rect key="frame" x="16" y="92.5" width="288" height="406.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ioq-vt-dnB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ioq-vt-dnB" firstAttribute="trailing" secondItem="gAc-Qp-ntZ" secondAttribute="trailing" constant="16" id="1dd-Bj-1sG">
-                                <mutableString key="userLabel">Safe Area.trailing = Don't let Daddy kiss me             Goodnight                          Little boy sleeping in dreams of peace             Mommy's been gone a long time             Daddy comes home and he still sleeps             Waiting for the world's worst crime                          And he comes up the stairs like he always does             And he never turns on the light             And he's wide awake, scared to death                          He smells his lust and he smells his sweat             Curled in ball he holds his breath             Praying to a God that he's never met                          Little boy lies by his Daddy's side             And he listen to him breathe             He knows there's something awful wrong             That he's far too young to see             And he knows he can't tell anyone                          He's so full of guilt and shame             And if he tells he'll be all alone             They'd steal his Daddy and they'd steal his home             And it's not so bad when Daddy leaves his alone             Praying to his God with his heart of stone                          Why the worst crime, in the world             And Daddy lies by his son's side             And he sleep both deep in well             No nightmares come to him tonight             Though his son lives in hell                          For his seed is sown where it should not be             And the beast in his mind don't care             And the only sounds are the tears that fall             Little boy turn his face to the wall             He knows that no one hears his call             But it seems like God hears nothing at all                          Don't let Daddy kiss me             Goodnight.trailing + 16</mutableString>
-                            </constraint>
-                            <constraint firstItem="gAc-Qp-ntZ" firstAttribute="leading" secondItem="ioq-vt-dnB" secondAttribute="leading" constant="16" id="Q0T-oA-V6D"/>
-                            <constraint firstItem="gAc-Qp-ntZ" firstAttribute="top" secondItem="ioq-vt-dnB" secondAttribute="top" id="qCd-mR-BvY"/>
-                            <constraint firstItem="ioq-vt-dnB" firstAttribute="bottom" secondItem="gAc-Qp-ntZ" secondAttribute="bottom" constant="16" id="w5o-8i-Aac">
-                                <mutableString key="userLabel">Safe Area.bottom = Don't let Daddy kiss me             Goodnight                          Little boy sleeping in dreams of peace             Mommy's been gone a long time             Daddy comes home and he still sleeps             Waiting for the world's worst crime                          And he comes up the stairs like he always does             And he never turns on the light             And he's wide awake, scared to death                          He smells his lust and he smells his sweat             Curled in ball he holds his breath             Praying to a God that he's never met                          Little boy lies by his Daddy's side             And he listen to him breathe             He knows there's something awful wrong             That he's far too young to see             And he knows he can't tell anyone                          He's so full of guilt and shame             And if he tells he'll be all alone             They'd steal his Daddy and they'd steal his home             And it's not so bad when Daddy leaves his alone             Praying to his God with his heart of stone                          Why the worst crime, in the world             And Daddy lies by his son's side             And he sleep both deep in well             No nightmares come to him tonight             Though his son lives in hell                          For his seed is sown where it should not be             And the beast in his mind don't care             And the only sounds are the tears that fall             Little boy turn his face to the wall             He knows that no one hears his call             But it seems like God hears nothing at all                          Don't let Daddy kiss me             Goodnight.bottom + 16</mutableString>
-                            </constraint>
+                            <constraint firstItem="ioq-vt-dnB" firstAttribute="bottom" secondItem="1VZ-7W-DCN" secondAttribute="bottom" constant="20" id="Fch-LR-22c"/>
+                            <constraint firstItem="1VZ-7W-DCN" firstAttribute="leading" secondItem="ioq-vt-dnB" secondAttribute="leading" constant="16" id="Teq-hT-U5C"/>
+                            <constraint firstItem="ioq-vt-dnB" firstAttribute="trailing" secondItem="1VZ-7W-DCN" secondAttribute="trailing" constant="16" id="Y0r-cQ-V5P"/>
+                            <constraint firstItem="1VZ-7W-DCN" firstAttribute="top" secondItem="ioq-vt-dnB" secondAttribute="top" id="pe9-OY-ttB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1mi-45-CaY"/>
+                    <connections>
+                        <outlet property="userBioTextView" destination="1VZ-7W-DCN" id="aaQ-mC-aAT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2k1-Gb-ziS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -338,6 +283,9 @@
     <resources>
         <image name="bookmark.circle.fill" catalog="system" width="128" height="123"/>
         <image name="graduationcap.fill" catalog="system" width="128" height="108"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

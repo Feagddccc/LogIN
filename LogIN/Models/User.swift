@@ -54,11 +54,12 @@ struct Person {
             Little boy lies by his Daddy's side
             And he listen to him breathe
             He knows there's something awful wrong
+            
             That he's far too young to see
             And he knows he can't tell anyone
-            
             He's so full of guilt and shame
             And if he tells he'll be all alone
+            
             They'd steal his Daddy and they'd steal his home
             And it's not so bad when Daddy leaves his alone
             Praying to his God with his heart of stone
@@ -67,11 +68,12 @@ struct Person {
             And Daddy lies by his son's side
             And he sleep both deep in well
             No nightmares come to him tonight
-            Though his son lives in hell
             
+            Though his son lives in hell
             For his seed is sown where it should not be
             And the beast in his mind don't care
             And the only sounds are the tears that fall
+            
             Little boy turn his face to the wall
             He knows that no one hears his call
             But it seems like God hears nothing at all
